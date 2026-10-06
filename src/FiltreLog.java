@@ -19,14 +19,19 @@ public class FiltreLog{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int nErrors = 0;
-        String linia;
+        String linia = br.readLine();
 
-        while ((linia = br.readLine()) != null) {
+
+        if (linia.equals("") || linia == null){
+            System.err.print("Error: Text buit");
+            System.exit(1);
+        } else{
             nErrors += comptarErrors(linia);
         }
 
-        System.out.print(nErrors);
 
+        System.out.print(nErrors);
+        System.exit(0);
     }
     
 }
