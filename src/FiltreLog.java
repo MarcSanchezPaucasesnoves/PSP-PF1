@@ -22,7 +22,7 @@ public class FiltreLog{
         String linia = br.readLine();
         String paraulaACercar = (args.length > 0) ? args[0] : "ERROR";
 
-        if (linia.equals("") || linia == null){
+        if (linia == null || linia.equals("")){
             System.err.print("Error: Text buit");
             System.exit(1);
         } else{
