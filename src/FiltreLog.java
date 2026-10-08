@@ -18,15 +18,18 @@ public class FiltreLog{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int nErrors = 0;
         String linia = br.readLine();
+        int nErrors = 0;
         String paraulaACercar = (args.length > 0) ? args[0] : "ERROR";
 
         if (linia == null || linia.equals("")){
             System.err.print("Error: Text buit");
             System.exit(1);
-        } else{
+        }
+
+        while ((linia) != null) {
             nErrors += comptarErrors(linia, paraulaACercar);
+            linia = br.readLine();
         }
 
 
