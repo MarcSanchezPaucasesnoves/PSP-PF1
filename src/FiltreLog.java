@@ -9,7 +9,7 @@ public class FiltreLog{
         int comptadorErrors = 0;
 
         for (String paraula : paraules) {
-            if (paraula.toUpperCase().equals(paraulaACercar)) comptadorErrors++;
+            if (paraula.contains(paraulaACercar)) comptadorErrors++;
         }
 
         return comptadorErrors;

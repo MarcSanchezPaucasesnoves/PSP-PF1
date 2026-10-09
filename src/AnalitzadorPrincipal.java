@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 public class AnalitzadorPrincipal {
 
     public static void main(String[] args) {
-        String texte = "Texte de prova amb un tres errors i tres warnings per passar el test. eRrOr error error Warning warning warning";
+        String texte = "Texte de prova amb un tres errors i tres warnings per passar el test.\n [ERROR] \n [ERROR] \n [ERROR] \n [WARNING] \n [WARNING] \n [WARNING]";
 
         ProcessBuilder pb = new ProcessBuilder("java", "src/FiltreLog.java");
         ProcessBuilder pb2 = new ProcessBuilder("java", "src/FiltreLog.java", "WARNING");
