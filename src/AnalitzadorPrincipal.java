@@ -14,7 +14,7 @@ public class AnalitzadorPrincipal {
         ProcessBuilder pb2 = new ProcessBuilder("java", "src/FiltreLog.java", "WARNING");
         File fitxerErrors = new File("errors_filtre.log");
         pb.redirectError(fitxerErrors);
-
+        pb2.redirectError(fitxerErrors);
         
 
         try {
